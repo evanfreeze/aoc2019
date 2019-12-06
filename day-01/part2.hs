@@ -3,8 +3,9 @@ masses = [92903,97793,95910,104540,122569,60424,145155,90081,81893,140366,77358,
 calculateFuel x = (x `quot` 3) - 2
 
 calculateInclFuel total mass
-    | (calculateFuel mass) <= 0 = total
-    | otherwise = calculateInclFuel (total + (calculateFuel mass)) (calculateFuel mass)
+    | fuel <= 0 = total
+    | otherwise = calculateInclFuel (total + fuel) fuel
+    where fuel = calculateFuel mass
 
 calculateFuelTotal x = sum (map (calculateInclFuel 0) x)
 
