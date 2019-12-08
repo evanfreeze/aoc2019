@@ -1,0 +1,12 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "description": "Advent of code 2019",
+  "main": "index.js",
+  "repository": "git@github.com:evanfreeze/aoc2019.git",
+  "author": "Evan Freeze <efreeze@lyft.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
