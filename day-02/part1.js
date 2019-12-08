@@ -23,3 +23,8 @@ function runProgram(start, output) {
 const result = runProgram(0, input);
 
 console.log(JSON.stringify(result[0]));
+
+module.exports = {
+    runProgram,
+    input,
+};
