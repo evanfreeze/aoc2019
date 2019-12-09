@@ -7,7 +7,8 @@
     "author": "Evan Freeze <evan@evanfreeze.com>",
     "license": "MIT",
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "tdd": "jest --watch"
     },
     "devDependencies": {
         "jest": "^24.9.0"
