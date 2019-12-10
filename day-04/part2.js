@@ -28,7 +28,8 @@ function checkIfAdjacentMatch(array) {
         }
     }
 
-    const { length: numberOfMatchesOf2 } = Object.keys(matches).filter(number => matches[number].length === 2);
+    const { length: numberOfMatchesOf2 } = Object.keys(matches)
+        .filter(number => matches[number].length === 2);
 
     return numberOfMatchesOf2 > 0;
 }
