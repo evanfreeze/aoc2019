@@ -43,11 +43,11 @@ function validate(number) {
         return false;
     }
 
-    if (checkIfAdjacentMatch(numberToNumberArray(number), 0)) {
-        return true;
+    if (!checkIfAdjacentMatch(numberToNumberArray(number), 0)) {
+        return false;
     }
 
-    return false;
+    return true;
 }
 
 function fillRangeOfNumbers(start, end) {
