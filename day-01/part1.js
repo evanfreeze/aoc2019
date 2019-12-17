@@ -9,3 +9,17 @@ const calculateFuel = R.pipe(divideBy(3), Math.floor, minus(2));
 const result = R.sum(R.map(calculateFuel, masses));
 
 console.log(`The total amount of fuel needed for part 1 is: ${result}`);
+
+// Just vanilla JavaScript b/c why not
+
+const sum = (total, value) => total + value;
+const callNextWithResult = (res, fn) => fn(res);
+
+const divideBy3 = x => x / 3;
+const roundDown = x => Math.floor(x);
+const subtract2 = x => x - 2;
+const functions = [divideBy3, roundDown, subtract2];
+const calcFuel = x => functions.reduce(callNextWithResult, x);
+const resultWithJs = masses.map(calcFuel).reduce(sum, 0);
+
+console.log(resultWithJs);
