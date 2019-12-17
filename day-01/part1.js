@@ -10,7 +10,7 @@ const result = R.sum(R.map(calculateFuel, masses));
 
 console.log(`The total amount of fuel needed for part 1 is: ${result}`);
 
-// Just vanilla JavaScript b/c why not
+// Just vanilla JavaScript
 
 const sum = (total, value) => total + value;
 const callNextWithResult = (res, fn) => fn(res);
